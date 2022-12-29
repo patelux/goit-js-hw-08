@@ -33,8 +33,8 @@ function onFormSubmit(event) {
 function outputFromLocalStorage() {
     const outputData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
     if (outputData) {
-        email.value = outputData.email;
-        message.value = outputData.message;
+        arr.email.value = outputData.email;
+        arr.message.value = outputData.message;
     }
 }
 outputFromLocalStorage();
