@@ -29,12 +29,12 @@ function onFormSubmit(event) {
     localStorage.removeItem(LOCALSTORAGE_KEY);
 }
 
-dataFromLocalStorage();
+outputFromLocalStorage();
 
-function dataFromLocalStorage() {
-    const data = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
-    if (data) {
-        email.value = arr.email;
-        message.value = arr.message;
+function outputFromLocalStorage() {
+    const outputData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
+    if (outputData) {
+        email.value = outputData.email;
+        message.value = outputData.message;
     }
 }
