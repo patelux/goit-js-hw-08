@@ -11,7 +11,7 @@ const arr = {
 arr.form.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormInput() {
-    const formData = JSON.stringify({ email: arr.email.ariaValueMax, message: arr.message.value });
+    const formData = JSON.stringify({email: arr.email.value, message: arr.message.value});
     localStorage.setItem(LOCALSTORAGE_KEY, formData);
 }
 
@@ -28,6 +28,7 @@ function onFormSubmit(event) {
     event.currentTarget.reset();
     localStorage.removeItem(LOCALSTORAGE_KEY);
 }
+outputFromLocalStorage();
 
 function outputFromLocalStorage() {
     const outputData = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
@@ -36,4 +37,4 @@ function outputFromLocalStorage() {
         arr.message.value = outputData.message;
     }
 }
-outputFromLocalStorage();
+
