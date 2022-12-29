@@ -11,8 +11,7 @@ const arr = {
 arr.form.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormInput() {
-    const formData = JSON.stringify({ email: arr.email.ariaValueMax, message: arr.message.value })
-|| {};
+    const formData = JSON.stringify({ email: arr.email.ariaValueMax, message: arr.message.value });
     localStorage.setItem(LOCALSTORAGE_KEY, formData);
 }
 
